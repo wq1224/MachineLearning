@@ -22,10 +22,10 @@ sigma2 = zeros(n, 1);
 %
 
 
-
-
-
-
+mu = mean(X,1)';
+%sigma2 = var(X,0,1)';
+% the var function will (by default) use 1/m-1 , instead of 1/m, when computing ¦Ò2
+sigma2 = (1/m * sum((X - mean(X,1)).^2,1))';
 
 
 
